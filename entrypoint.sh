@@ -40,3 +40,11 @@ else
     echo "The ROS2 health checker script did not pass all tests."
     exit 64
 fi
+
+# Check performance of the optimization-based action selection
+if python3 /optimization_based_action_selection_performance.py; then
+    echo "The ROS2 optimization-based action selection performance check script returned status 0."
+else
+    echo "The ROS2 optimization-based action selection performance check script did not pass all tests."
+    exit 64
+fi

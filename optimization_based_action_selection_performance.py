@@ -13,8 +13,6 @@ MAX_ALLOWED_PREDICTION_ERROR_STD = 0  # m
 
 def main():
 
-    print("THOMAS)
-
     # Load data
     with open("./dummy.pkl", "rb") as f:
         optimization_time, target_error = pickle.load(f)

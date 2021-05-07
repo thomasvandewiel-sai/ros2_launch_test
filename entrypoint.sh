@@ -1,7 +1,11 @@
 #!/bin/bash
 
+echo "line 0"
+
 set -e
 env
+
+echo "Start of file"
 
 project_name=$(basename `git rev-parse --show-toplevel`)
 
@@ -12,6 +16,8 @@ cd $GITHUB_WORKSPACE
 rsync -aq --remove-source-files . ws/src/$project_name --exclude ws
 
 cd ws
+
+echo "Before colcon build"
 
 # Compile and source workspace packages
 source "/opt/ros/$ROS_DISTRO/setup.bash"

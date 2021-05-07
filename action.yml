@@ -20,7 +20,7 @@ inputs:
 
   listen_topics:
     description: 'List of topics that will be verified. E.g.: /my_topic_1 /my_node/another_topic_2'
-    required: true
+    required: false
 
 runs:
   using: 'docker'
